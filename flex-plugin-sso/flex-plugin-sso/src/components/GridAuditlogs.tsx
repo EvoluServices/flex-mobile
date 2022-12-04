@@ -17,10 +17,10 @@ export const GridAuditlogs: React.FC<GridProps> = ({ data }) => {
     <DataGrid aria-label="User list" data-testid="data-grid">
       <DataGridHead>
         <DataGridRow>
-          <DataGridHeader data-testid="header-1">When</DataGridHeader>
-          {hasManyCompanies ? <DataGridHeader>From Company</DataGridHeader> : null}
-          <DataGridHeader>Section</DataGridHeader>
-          <DataGridHeader>Event log</DataGridHeader>
+          <DataGridHeader data-testid="header-1">Data</DataGridHeader>
+          {hasManyCompanies ? <DataGridHeader>Empresa</DataGridHeader> : null}
+          <DataGridHeader>Seção</DataGridHeader>
+          <DataGridHeader>Evento</DataGridHeader>
         </DataGridRow>
       </DataGridHead>
       <DataGridBody>

@@ -75,24 +75,24 @@ export const NewWorker: React.FC<BasicModalDialogProps> = ({ isOpen, handleClose
       <StyledModalDialogContent>
         <Box margin="space40">
           <Box>
-            <Label htmlFor="name">Agent Name</Label>
+            <Label htmlFor="name">Nome completo</Label>
             <Input
               id="name"
               name="name"
               type="text"
-              placeholder="John"
+              placeholder="João Ninguém"
               onChange={(e) => {
                 setName(e.target.value);
               }}
             />
           </Box>
           <Box marginTop="space80">
-            <Label htmlFor="phoneNumber">Phone Number</Label>
+            <Label htmlFor="phoneNumber">Número de celular</Label>
             <Input
               id="phoneNumber"
               name="phoneNumber"
               type="text"
-              placeholder="+49123123123"
+              placeholder="+5511988888888"
               onChange={(e) => {
                 setPhoneNumber(e.target.value);
               }}
@@ -100,9 +100,9 @@ export const NewWorker: React.FC<BasicModalDialogProps> = ({ isOpen, handleClose
           </Box>
           {supervisorDepartment === 'internal' && hasManyCompanies ? (
             <Box marginTop="space80">
-              <Label htmlFor="departmentName">From which company does this person belong?</Label>
+              <Label htmlFor="departmentName">Empresa</Label>
               <Select id="departmentName" onChange={onChangeDepartment}>
-                <Option value="internal">Internal employee</Option>
+                <Option value="internal">Colaborador interno</Option>
                 {Object.entries(companies).map(([id, name]) => {
                   return <Option value={id}>{name}</Option>;
                 })}
@@ -110,7 +110,7 @@ export const NewWorker: React.FC<BasicModalDialogProps> = ({ isOpen, handleClose
             </Box>
           ) : null}
           <Box marginTop="space80">
-            <Label htmlFor="author">Role access</Label>
+            <Label htmlFor="author">Papéis</Label>
             <Select id="role" onChange={onChangeRole}>
               <Option value="agent">agent</Option>
               <Option value="supervisor,wfo.full_access">supervisor, wfo.full_access</Option>
@@ -127,9 +127,9 @@ export const NewWorker: React.FC<BasicModalDialogProps> = ({ isOpen, handleClose
                 href="https://www.twilio.com/docs/flex/admin-guide/setup/sso-configuration/insights-user-roles#understanding-flex-insights-roles"
                 target="_blank"
               >
-                Click here
+                Clique aqui
               </a>{' '}
-              to understand these Roles.
+              para entender estes papéis.
             </HelpText>
           </Box>
           <Box marginTop="space80"></Box>
@@ -149,12 +149,12 @@ export const NewWorker: React.FC<BasicModalDialogProps> = ({ isOpen, handleClose
                   setCanAddAgents(event.target.checked);
                 }}
               >
-                <span style={{ fontWeight: 'bold' }}>{name}</span> can add/delete other agents.
+                <span style={{ fontWeight: 'bold' }}>{name}</span> pode adicionar/remover outros agentes.
               </Checkbox>
             </Box>
             <Box display="inline-block" width="30%" textAlign="right">
               <Button variant="primary" loading={isLoading} onClick={onClick}>
-                Save
+                Salvar
               </Button>
             </Box>
           </Box>

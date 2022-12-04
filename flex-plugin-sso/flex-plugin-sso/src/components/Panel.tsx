@@ -12,9 +12,9 @@ export default () => {
     <Theme.Provider theme="default">
       <Box margin="space50">
         <Tabs state={tab}>
-          <TabList aria-label="State hook tabs">
-            <Tab>Manage</Tab>
-            <Tab>Audit logs</Tab>
+          <TabList aria-label="Abas de estado">
+            <Tab>Gerenciar agentes</Tab>
+            <Tab>Eventos</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>

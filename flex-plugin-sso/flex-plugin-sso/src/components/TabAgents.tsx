@@ -36,7 +36,7 @@ export const TabAgents = () => {
     return (
       <Theme.Provider theme="default">
         <Box display="flex" alignItems="center" justifyContent="center" height="100%" width="100%" position="absolute">
-          <Spinner size="sizeIcon110" decorative={false} title="Loading" />
+          <Spinner size="sizeIcon110" decorative={false} title="Carregando" />
         </Box>
       </Theme.Provider>
     );
@@ -47,7 +47,7 @@ export const TabAgents = () => {
       <Theme.Provider theme="default">
         <Box display="flex" justifyContent="right" margin="space80">
           <Button variant="secondary" onClick={handleOpen}>
-            Add new Agent 🥰
+            Adicionar agente 🥰
           </Button>
         </Box>
         <Box margin="space40" height="80vh" overflowY="auto">

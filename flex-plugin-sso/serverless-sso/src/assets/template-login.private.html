@@ -48,8 +48,8 @@
       <article class="grid">
         <div>
           <hgroup>
-            <h1 id="phoneNumberTitle">Your phone number:</h1>
-            <h1 id="codeTitle" style="display: none">Code:</h1>
+            <h1 id="phoneNumberTitle">Seu número de telefone:</h1>
+            <h1 id="codeTitle" style="display: none">Código:</h1>
             <h2></h2>
           </hgroup>
           <form id="form" action="https://iam.twilio.com/v1/Accounts/{ACCOUNT_SID}/saml2" method="post">
@@ -57,19 +57,19 @@
             <input type="hidden" id="RelayState" name="RelayState" value="" />
           </form>
           <form onsubmit="event.preventDefault(); submitt(event);">
-            <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="+49111222333" aria-label="phonenumber" required />
+            <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="+5511977777777" aria-label="phonenumber" required />
             <input
               style="display: none"
               id="code"
               name="code"
-              placeholder="code received by SMS?"
+              placeholder="Código recebido por SMS?"
               maxlength="10"
               type="number"
               aria-required="true"
               value=""
               autocomplete="off"
             />
-            <button aria-busy="false" type="submit" id="button" class="contrast">Send me a short code</button>
+            <button aria-busy="false" type="submit" id="button" class="contrast">Enviar código</button>
             <small id="error" style="visibility: hidden"></small>
           </form>
         </div>
@@ -140,7 +140,7 @@
           display('codeTitle', '');
           display('phoneNumber', 'none');
           display('phoneNumberTitle', 'none');
-          document.getElementById('button').innerText = 'Start Flex!';
+          document.getElementById('button').innerText = 'Iniciar Flex!';
           step = 2;
         } catch (e) {
           showError(`Error: ${e.message}`);
@@ -198,7 +198,7 @@
             step = 1;
             display('phoneNumber', '');
             display('phoneNumberTitle', '');
-            document.getElementById('button').innerText = 'Send me a short code';
+            document.getElementById('button').innerText = 'Enviar um código';
             buttonDisable(false);
             return;
           }
@@ -236,7 +236,7 @@
         buttonDisable(true);
         display('phoneNumber', 'none');
         display('phoneNumberTitle', 'none');
-        document.getElementById('button').innerText = 'Authenticating...';
+        document.getElementById('button').innerText = 'Autenticando...';
         loginViaLongTermToken();
       }
     </script>

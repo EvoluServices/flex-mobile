@@ -23,7 +23,7 @@ export const TabAuditlogs = () => {
     return (
       <Theme.Provider theme="default">
         <Box display="flex" alignItems="center" justifyContent="center" height="100%" width="100%" position="absolute">
-          <Spinner size="sizeIcon110" decorative={false} title="Loading" />
+          <Spinner size="sizeIcon110" decorative={false} title="Carregando" />
         </Box>
       </Theme.Provider>
     );

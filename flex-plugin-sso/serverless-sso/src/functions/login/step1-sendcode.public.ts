@@ -30,7 +30,7 @@ export const handler: ServerlessFunctionSignature<MyContext, MyEvent> = async (c
     // Send the Code
     const verification = await twilioClient.verify
       .services(VERIFY_SERVICE_SID)
-      .verifications.create({ to: phoneNumber, channel: 'sms', locale: 'en' });
+      .verifications.create({ to: phoneNumber, channel: 'sms', locale: 'pt-BR' });
 
     // Log
     await sync.addLog('login', `"${user.name}" has received the SMS code and is trying to login...`, user.department);
